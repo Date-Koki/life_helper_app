@@ -46,3 +46,21 @@
 # バンドルされたGem（ローカルのみで使う）
 /vendor/
 /vendor/bundle
+
+/app/assets/builds/*
+!/app/assets/builds/.keep
+
+# OS関連
+.DS_Store
+
+# エディタやIDEの一時ファイル
+*.swp
+*~
+.idea/
+.vscode/
+
+# バンドルされたGem（ローカルのみで使う）
+/vendor/
+/vendor/bundle
+
+/node_modules/
