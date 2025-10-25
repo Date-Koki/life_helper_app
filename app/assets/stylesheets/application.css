@@ -78,3 +78,19 @@
 .auth-links a:hover {
   text-decoration: underline;
 }
+
+.login-flash-message { margin-bottom: 10px; }
+.error-message { color: red; }
+.notice-message { color: green; }
+
+#error_explanation {
+  color: red;
+}
+
+#error_explanation h2 {
+  color: red;
+}
+
+#error_explanation ul li {
+  color: red;
+}
