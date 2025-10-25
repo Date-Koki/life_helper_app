@@ -9,7 +9,6 @@
       <%= f.label :name, "名前" %>
       <%= f.text_field :name %>
     </div>
-
     <div class="auth-field">
       <%= f.label :nickname, "ニックネーム" %>
       <%= f.text_field :nickname %>
@@ -24,12 +23,10 @@
       <%= f.label :password, "パスワード" %>
       <%= f.password_field :password %>
     </div>
-
     <div class="auth-field">
       <%= f.label :password_confirmation, "パスワード確認" %>
       <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
     </div>
-
     <div class="auth-actions">
       <%= f.submit "登録する", class: "auth-btn" %>
     </div>
