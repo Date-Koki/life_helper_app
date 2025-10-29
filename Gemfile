@@ -77,3 +77,5 @@ end
 gem 'devise'
 gem "tailwindcss-rails", "~> 4.3"
 gem 'rails-i18n'
+
+gem 'active_hash'

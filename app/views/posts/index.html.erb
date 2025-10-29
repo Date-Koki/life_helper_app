@@ -1,0 +1,16 @@
+<h2 class="posts-title">投稿一覧</h2>
+
+<div class="posts-grid">
+  <% @posts.each do |post| %>
+    <div class="post-card">
+      <div class="post-card-body">
+        <h3 class="post-title"><%= post.title %></h3>
+        <p class="post-meta">
+          📂 <%= post.category.name %>　📅 <%= l(post.schedule_at, format: :short) %>
+        </p>
+        <p class="post-description"><%= truncate(post.description, length: 60) %></p>
+        <%= link_to "詳細を見る", post_path(post), class: "post-btn" %>
+      </div>
+    </div>
+  <% end %>
+</div>
