@@ -1,0 +1,131 @@
+.post-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 40px;
+  background-color: #f5f6f8;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.post-container h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #333;
+  font-weight: 600;
+}
+
+.post-field {
+  display: flex;
+  flex-direction: column;
+  gap: 1px; /* ラベルとフォームの距離 */
+  margin-bottom: 20px; /* 各項目間の余白 */
+}
+
+.post-container label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.2;
+  margin-bottom: 0; /* ←ここを0に */
+}
+
+.post-container input[type="text"],
+.post-container input[type="email"],
+.post-container input[type="password"],
+.post-container input[type="datetime-local"],
+.post-container select,
+.post-container textarea {
+  width: 100%;
+  padding: 14px 16px; /* ← 少し広めに */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px; /* ← 少し大きく */
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.post-container input:focus,
+.post-container textarea:focus,
+.post-container select:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 6px rgba(79, 70, 229, 0.2); /* ← フォーカス時の視覚効果 */
+  outline: none;
+}
+
+.post-container textarea {
+  min-height: 120px; /* ← 説明欄などは広めに */
+  resize: vertical; /* ← 高さ変更を許可 */
+}
+
+.post-actions {
+  display: flex;
+  justify-content: center; /* 中央寄せ */
+  margin-top: 30px;
+}
+
+.post-container input[type="submit"] {
+  width: 100%; /* ← まずは親の幅いっぱいに */
+  max-width: 320px; /* ← 最大幅を制限（スマホでも整う） */
+  background-color: #666363;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 0;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s ease-in-out;
+  display: block;
+  margin: 0 auto; /* ← 万一flexが効かない場合の保険 */
+}
+
+.post-container input[type="submit"]:hover {
+  background-color: #333333;
+  transform: scale(1.02);
+}
+
+.post-links {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.post-links a {
+  color: #333333;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.post-links a:hover {
+  text-decoration: underline;
+}
+
+.flash-message { margin-bottom: 10px; }
+.error-messages { color: red; }
+.notice-message { color: green; }
+
+#error_messages {
+  color: red;
+}
+
+#error_messages ul li {
+  color: red;
+}
+
+#error_messages {
+  background-color: #ffe6e6;
+  border: 1px solid #ffb3b3;
+  color: #d8000c;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+#error_messages ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+#error_messages ul li {
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}

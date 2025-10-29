@@ -7,6 +7,12 @@ ja:
         email: メールアドレス
         password: パスワード
         password_confirmation: パスワード（確認）
+      post:
+        title: "タイトル"
+        category_id: "カテゴリー"
+        schedule_at: "日時（デッドライン）"
+        description: "やること"
+        user: "ユーザー登録"
     errors:
       models:
         user:
@@ -25,3 +31,16 @@ ja:
               invalid: "は半角英数字を含めて設定してください"
             password_confirmation:
               confirmation: "が一致していません"
+        post:
+          attributes:
+            title:
+              blank: "がありません"
+            category_id:
+              other_than: "が選択されていません"
+            schedule_at:
+              blank: "を入力してください"
+            description:
+              blank: "を入力してください"
+      messages: 
+          blank: "を入力してください"
+          other_than: "が選択されていません"

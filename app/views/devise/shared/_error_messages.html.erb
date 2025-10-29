@@ -1,11 +1,13 @@
-<% obj = local_assigns[:model] || local_assigns[:resource] %>
-<div id="error_explanation" class="error-messages" style="color: red;">
-<% if obj && obj.errors.any? %>
-  <div class="error-messages">
+<% ordered_attrs = [:name, :nickname, :email, :password, :password_confirmation] %>
+
+<div id="error_explanation">
+  <% if model.errors.any? %>
     <ul>
-      <% obj.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <% ordered_attrs.each do |attr| %>
+        <% model.errors.full_messages_for(attr).each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       <% end %>
     </ul>
-  </div>
-<% end %>
+  <% end %>
+</div>

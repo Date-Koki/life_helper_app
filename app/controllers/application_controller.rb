@@ -2,10 +2,18 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :basic_auth
 
-  def hello
-    render plain: "Hello world"
+  def index
   end
 
+  def show
+    
+  end
+
+  
+
+  def destroy
+    
+  end
   
   private
 
