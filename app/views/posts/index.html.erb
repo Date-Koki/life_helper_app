@@ -9,7 +9,7 @@
           📂 <%= post.category.name %>　📅 <%= l(post.schedule_at, format: :short) %>
         </p>
         <p class="post-description"><%= truncate(post.description, length: 60) %></p>
-        <%= link_to "詳細を見る", post_path(post), class: "post-btn" %>
+        <%= link_to "詳細を見る", post_path(post.id), class: "post-btn" %>
       </div>
     </div>
   <% end %>
