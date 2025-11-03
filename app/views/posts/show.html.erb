@@ -3,14 +3,16 @@
     <h2 class="post-show-title"><%= @post.title %></h2>
       <div class="post-show-meta">
         <div><strong>カテゴリー</strong><br><%= @post.category.name %></div>
-        <div><strong>日時（デッドライン）</strong><br><%= @post.schedule_at.strftime("%Y年%m月%d日 %H:%M") %>
+        <div><strong>日時（デッドライン）</strong><br><%= @post.schedule_at.strftime("%Y年%m月%d日 %H:%M") %></div>
         <div><strong>やること</strong><br><%= @post.description %></div>
       </div>
 
   <div class="post-show-actions">
     <% if @post.user == current_user %>
       <%= link_to '編集', edit_post_path(@post), class: "btn btn-edit" %>
-      <%= link_to '削除', post_path(@post), data: { turbo_method: :delete, confirm: "本当に削除しますか？" }, class: "btn btn-delete" %>
+      <%= form_with model: @post, url: post_path(@post), method: :delete, data: { turbo_confirm: "本当に削除しますか？" } do %>
+        <%= submit_tag "削除", class: "btn btn-delete" %>
+      <% end %>
     <% end %>
     <%= link_to '一覧に戻る', posts_path, class: "btn btn-back" %>
   </div>

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+if ! command -v foreman &> /dev/null
+then
+  echo "Installing foreman..."
+  gem install foreman
+fi
+
+echo "Starting Rails and JS..."
+exec foreman start -f Procfile.dev
