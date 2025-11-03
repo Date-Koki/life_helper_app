@@ -1,3 +1,8 @@
+/*
+ *= require_tree .
+ *= require_self
+ */
+
 /* 共通デザイン（サインアップ・ログイン・パスワードリセットなどに共通） */
 .auth-container {
   max-width: 400px;

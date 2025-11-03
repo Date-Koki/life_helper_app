@@ -1,5 +1,5 @@
 <div class="post-container">
-  <h2>新しい投稿</h2>
+  <h2>投稿の編集</h2>
 
   <% if @post.errors.any? %>
   <div class="error-messages">
@@ -33,7 +33,7 @@
     </div>
 
     <div class="post-actions mt-3">
-      <%= f.submit "投稿", class: "btn btn-primary" %>
+      <%= f.submit "再投稿", class: "btn btn-primary" %>
     </div>
   <% end %>
 </div>
