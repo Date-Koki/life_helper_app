@@ -19,7 +19,8 @@
         <nav class="site-nav">
           <ul>
             <% if user_signed_in? %>
-              <li><%= link_to '投稿', new_post_path, class: "nav-btn" %></li>
+              <li><%= link_to 'TODO投稿', new_post_path, class: "nav-btn" %></li>
+              <li><%= link_to 'ライフハック投稿', new_lifehack_post_path, class: "nav-btn" %></li>
               <li><%= link_to current_user.nickname, "/user/#{current_user.id}", class: "nav-btn" %></li>
               <li><%= link_to 'ログアウト', destroy_user_session_path, data: { turbo_method: :delete }, class: "nav-btn nav-btn-primary" %></li>
             <% else %>

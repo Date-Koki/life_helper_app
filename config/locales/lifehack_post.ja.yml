@@ -1,0 +1,22 @@
+ja:
+  activerecord:
+    attributes:
+      lifehack_post:
+        title: "タイトル"
+        category_id: "カテゴリー"
+        description: "内容"
+
+    errors:
+      models:
+        lifehack_post:
+          attributes:
+            title:
+              blank: "がありません"
+            category_id:
+              other_than: "が選択されていません"
+            description:
+              blank: "を入力してください"
+
+      messages: 
+        blank: "を入力してください"
+        other_than: "が選択されていません"

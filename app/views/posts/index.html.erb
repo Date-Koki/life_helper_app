@@ -1,4 +1,4 @@
-<h2 class="posts-title">投稿一覧</h2>
+<h2 class="posts-title">TODOリスト投稿一覧</h2>
 
 <div class="posts-grid">
   <% @posts.each do |post| %>
@@ -6,10 +6,29 @@
       <div class="post-card-body">
         <h3 class="post-title"><%= post.title %></h3>
         <p class="post-meta">
-          📂 <%= post.category.name %>　📅 <%= l(post.schedule_at, format: :short) %>
+          📂 <%= post.category.name %><br>
+          📅 <%= l(post.schedule_at, format: :short) %>
         </p>
         <p class="post-description"><%= truncate(post.description, length: 60) %></p>
         <%= link_to "詳細を見る", post_path(post.id), class: "post-btn" %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<h2 class="posts-title">ライフハック投稿一覧</h2>
+
+<div class="posts-grid">
+  <% @lifehack_posts.each do |post| %>
+    <div class="post-card">
+      <div class="post-card-body">
+        <h3 class="post-title"><%= post.title %></h3>
+        <p class="post-meta">
+          <%= post.category.name %><br>
+          <%= image_tag post.image.variant(resize: '200x200'), class: 'post-image' if post.image.attached? %>
+        </p>
+        <p class="post-description"><%= truncate(post.description, length: 60) %></p>
+        <%= link_to "詳細を見る", lifehack_post_path(post.id), class: "post-btn" %>
       </div>
     </div>
   <% end %>

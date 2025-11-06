@@ -1,0 +1,2 @@
+module LifehackPostsHelper
+end

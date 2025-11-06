@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+
+  has_many :lifehack_posts, dependent: :destroy
+
   # Deviseモジュール
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,

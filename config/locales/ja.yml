@@ -13,6 +13,7 @@ ja:
         schedule_at: "日時（デッドライン）"
         description: "やること"
         user: "ユーザー登録"
+
     errors:
       models:
         user:
@@ -41,6 +42,7 @@ ja:
               blank: "を入力してください"
             description:
               blank: "を入力してください"
+
       messages: 
-          blank: "を入力してください"
-          other_than: "が選択されていません"
+        blank: "を入力してください"
+        other_than: "が選択されていません"
