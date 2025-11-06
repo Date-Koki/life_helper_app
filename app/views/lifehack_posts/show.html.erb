@@ -1,0 +1,19 @@
+<div class="post-show-container">
+  <div class="post-show-header">
+    <h2 class="post-show-title"><%= @lifehack_post.title %></h2>
+      <div class="post-show-meta">
+        <div><strong>カテゴリー</strong><br><%= @lifehack_post.category.name %></div>
+        <div><strong>画像</strong><br><%= image_tag @lifehack_post.image.variant(resize_to_limit: [300, 300]), class: "post-box-img" if @lifehack_post.image.attached? %></div>
+        <div><strong>内容</strong><br><%= @lifehack_post.description %></div>
+      </div>
+
+  <div class="post-show-actions">
+    <% if @lifehack_post.user == current_user %>
+      <%= link_to '編集', edit_post_path(@lifehack_post), class: "btn btn-edit" %>
+      <%= form_with model: @lifehack_post, url: post_path(@lifehack_post), method: :delete, data: { turbo_confirm: "本当に削除しますか？" } do %>
+        <%= submit_tag "削除", class: "btn btn-delete" %>
+      <% end %>
+    <% end %>
+    <%= link_to '一覧に戻る', posts_path, class: "btn btn-back" %>
+  </div>
+</div>
