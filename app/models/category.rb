@@ -7,4 +7,7 @@ class Category < ActiveHash::Base
     { id: 4, name: '掃除関係' },
     { id: 5, name: 'その他' }
   ]
+
+  include ActiveHash::Associations
+  has_many :lifehack_posts
 end

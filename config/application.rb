@@ -27,5 +27,6 @@ module LifeHelperApp
     # config.eager_load_paths << Rails.root.join("extras")
     config.time_zone = 'Tokyo'
     config.active_record.default_timezone = :local
+    config.active_storage.variant_processor = :mini_magick
   end
 end
