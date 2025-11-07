@@ -9,8 +9,8 @@
 
   <div class="post-show-actions">
     <% if @lifehack_post.user == current_user %>
-      <%= link_to '編集', edit_post_path(@lifehack_post), class: "btn btn-edit" %>
-      <%= form_with model: @lifehack_post, url: post_path(@lifehack_post), method: :delete, data: { turbo_confirm: "本当に削除しますか？" } do %>
+      <%= link_to '編集', edit_lifehack_post_path(@lifehack_post), class: "btn btn-edit" %>
+      <%= form_with model: @lifehack_post, url: lifehack_post_path(@lifehack_post), method: :delete, data: { turbo_confirm: "本当に削除しますか？" } do %>
         <%= submit_tag "削除", class: "btn btn-delete" %>
       <% end %>
     <% end %>
