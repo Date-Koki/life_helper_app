@@ -3,7 +3,7 @@ class LifehackPost < ApplicationRecord
   belongs_to :category
   belongs_to :user
   has_one_attached :image
-  has_many :likes, dependent: :destroy
+  # has_many :likes, dependent: :destroy
 
   validates :title, presence: true
   validates :category_id, numericality: { other_than: 0, message: "が選択されていません" }
