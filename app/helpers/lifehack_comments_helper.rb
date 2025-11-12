@@ -1,0 +1,2 @@
+module LifehackCommentsHelper
+end
