@@ -17,6 +17,8 @@ class LifehackPostsController < ApplicationController
   end
 
   def show
+    @comment = LifehackComment.new
+    @comments = @lifehack_post.lifehack_comments.includes(:user)
   end
 
   def edit

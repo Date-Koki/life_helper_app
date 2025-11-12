@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= javascript_importmap_tags %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload", media: "all" %>
     <%= stylesheet_link_tag "posts", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "show", media: "all" %>
-     <%= stylesheet_link_tag "flatpickr.min", media: "all" %>
-    <%= javascript_importmap_tags %>
+    <%= stylesheet_link_tag "flatpickr.min", media: "all" %>
+    <%= stylesheet_link_tag "comments", "data-turbo-track": "reload", media: "all" %>
   </head>
 
   <body>
@@ -22,7 +23,7 @@
               <li><%= link_to 'TODO投稿', new_post_path, class: "nav-btn" %></li>
               <li><%= link_to 'ライフハック投稿', new_lifehack_post_path, class: "nav-btn" %></li>
               <li><%= link_to current_user.nickname, "/user/#{current_user.id}", class: "nav-btn" %></li>
-              <li><%= link_to 'ログアウト', destroy_user_session_path, data: { turbo_method: :delete }, class: "nav-btn nav-btn-primary" %></li>
+              <li><%= button_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-btn nav-btn-primary" %></li>
             <% else %>
               <li><%= link_to 'ログイン', new_user_session_path, class: "nav-btn" %></li>
               <li><%= link_to '新規登録', new_user_registration_path, class: "nav-btn nav-btn-primary" %></li>

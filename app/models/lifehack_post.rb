@@ -2,6 +2,7 @@ class LifehackPost < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
   belongs_to :user
+  has_many :lifehack_comments, dependent: :destroy
   has_one_attached :image
   # has_many :likes, dependent: :destroy
 

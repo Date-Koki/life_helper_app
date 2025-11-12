@@ -9,8 +9,6 @@ class ApplicationController < ActionController::Base
     
   end
 
-  
-
   def destroy
     
   end
