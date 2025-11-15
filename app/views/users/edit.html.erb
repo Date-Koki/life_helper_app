@@ -1,0 +1,19 @@
+<div class="mypage-edit-container">
+  <h2>アカウント情報編集</h2>
+
+  <div class="form-row">
+    <div class="form-group">
+      <%= label_tag :nickname, "ニックネーム" %>
+      <%= text_field_tag :nickname, @user.nickname %>
+    </div>
+    <div class="form-group">
+      <%= label_tag :email, "メールアドレス" %>
+      <%= email_field_tag :email, @user.email %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= submit_tag "更新", class: "btn btn-primary" %>
+    <%= link_to "戻る", user_path(@user), class: "btn btn-primary" %>
+  </div>
+</div>
