@@ -1,0 +1,89 @@
+/* マイページ全体 */
+.mypage-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* セクションタイトル */
+.mypage-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.mypage-container h3 {
+  font-size: 1.4rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+/* アカウント情報 */
+.account-info p {
+  font-size: 1rem;
+  margin: 6px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-top: 8px;
+  border-radius: 4px;
+  border: 1px solid #007bff;
+  text-decoration: none;
+  color: #007bff;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary {
+  font-weight: bold;
+}
+
+.btn-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-danger {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* 投稿カード */
+.post-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.post-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.post-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
