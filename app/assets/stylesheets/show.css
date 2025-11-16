@@ -60,3 +60,18 @@
   border: 1px solid #007bff;
   color: #007bff;
 }
+
+.like-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.like-btn.liked {
+  color: red;
+}
+
+.no-underline {
+  text-decoration: none;
+}
