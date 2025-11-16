@@ -3,6 +3,7 @@ class User < ApplicationRecord
   has_many :lifehack_posts, dependent: :destroy
   has_many :lifehack_comments, dependent: :destroy
   has_many :posts
+  has_many :likes
 
   # Deviseモジュール
   devise :database_authenticatable, :registerable,

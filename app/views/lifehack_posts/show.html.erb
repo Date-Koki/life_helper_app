@@ -2,6 +2,7 @@
   <div class="post-show-header">
     <h2 class="post-show-title"><%= @lifehack_post.title %></h2>
       <div class="post-show-meta">
+        <div><strong>ニックネーム</strong><br><%= @lifehack_post.nickname %></div>
         <div><strong>カテゴリー</strong><br><%= @lifehack_post.category.name %></div>
         <div><strong>画像</strong><br><%= image_tag @lifehack_post.image.variant(resize_to_limit: [300, 300]), class: "post-box-img" if @lifehack_post.image.attached? %></div>
         <div><strong>内容</strong><br><%= @lifehack_post.description %></div>
@@ -16,6 +17,8 @@
     <% end %>
     <%= link_to '一覧に戻る', posts_path, class: "btn btn-back" %>
   </div>
+
+  <%= render "lifehack_posts/like", lifehack_post: @lifehack_post %>
 
   <div class="post-show-comments">
     <% if user_signed_in? %>
