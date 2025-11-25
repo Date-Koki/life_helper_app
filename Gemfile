@@ -87,3 +87,7 @@ gem 'image_processing', '~> 1.2'
 
 gem 'jquery-rails', '~> 4.5'
 gem "sass-rails"
+
+gem 'httparty'
+
+gem "dotenv-rails"
