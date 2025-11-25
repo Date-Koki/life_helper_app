@@ -1,5 +1,3 @@
-require "openai"
-
 class LivingTodosController < ApplicationController
   def new
     # 都道府県選択用サンプル
