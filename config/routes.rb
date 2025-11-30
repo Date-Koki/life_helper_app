@@ -3,12 +3,14 @@ Rails.application.routes.draw do
   root 'posts#index'
   resources :posts
   resources :lifehack_posts do
+    collection do
+      get :search
+    end
     resources :lifehack_comments, only: [:create, :destroy]
-  end
-  resources :users, only: [:show, :edit, :update]
-  resources :lifehack_posts do
     resources :likes, only: [:create, :destroy]
   end
+  resources :users, only: [:show, :edit, :update]
+
   resources :living_todos, only: [:new, :create]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

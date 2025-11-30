@@ -2,6 +2,17 @@ class LifehackPostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @posts = Post.includes(:category).order(created_at: :desc)
+    @q = LifehackPost.ransack(params[:q])
+    @lifehack_posts = @q.result(distinct: true)
+  end
+
+  def search
+    @q = LifehackPost.ransack(params[:q])
+    @lifehack_posts = @q.result.includes(:category)
+  end
+
   def new
     @lifehack_post = LifehackPost.new
   end
