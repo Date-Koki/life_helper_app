@@ -91,3 +91,5 @@ gem "sass-rails"
 gem 'httparty'
 
 gem "dotenv-rails"
+
+gem 'ransack'
