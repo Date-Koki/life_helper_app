@@ -22,7 +22,6 @@ class LifehackPost < ApplicationRecord
     %w[user category]
   end
   
-  # タイトルまたは説明文で検索できる仮想属性を追加
   def self.ransackable_attributes(auth_object = nil)
     %w[title description category_id] + super
   end

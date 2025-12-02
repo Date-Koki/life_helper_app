@@ -1,20 +1,17 @@
 class LivingTodosController < ApplicationController
   def new
-    # 都道府県選択用サンプル
     @prefectures = ["東京都", "大阪府", "京都府"]
   end
 
   def create
     prefecture = params[:prefecture]
 
-    # 都道府県ごとのサンプルTODO
     sample_todos = {
       "東京都" => ["住民票の移動", "転出・転入手続き", "国民健康保険加入", "マイナンバー住所変更", "運転免許証の住所変更"],
       "大阪府" => ["住民票の移動", "転出・転入手続き", "国民健康保険加入", "学校手続き", "公共料金契約"],
       "京都府" => ["住民票の移動", "転出・転入手続き", "国民健康保険加入", "電気・ガス契約", "銀行口座開設"]
     }
 
-    # 都道府県ごとの代表市町村リンク
     city_links = {
       "東京都" => {
         "千代田区" => "https://www.city.chiyoda.lg.jp/",

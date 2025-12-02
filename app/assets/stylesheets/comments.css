@@ -1,7 +1,7 @@
 .post-show-comments {
   margin-top: 30px;
   padding: 20px;
-  background-color: #ffffff; /* コンテナの中で浮かせる印象に */
+  background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
@@ -20,6 +20,7 @@
 
 .post-show-comments textarea {
   width: 100%;
+  box-sizing: border-box;
   resize: none;
   padding: 10px;
   border: 1px solid #ccc;

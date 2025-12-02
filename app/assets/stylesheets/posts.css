@@ -18,8 +18,8 @@
 .post-field {
   display: flex;
   flex-direction: column;
-  gap: 1px; /* ラベルとフォームの距離 */
-  margin-bottom: 20px; /* 各項目間の余白 */
+  gap: 1px;
+  margin-bottom: 20px;
 }
 
 .post-container label {
@@ -27,7 +27,7 @@
   font-size: 14px;
   color: #555;
   line-height: 1.2;
-  margin-bottom: 0; /* ←ここを0に */
+  margin-bottom: 0;
 }
 
 .post-container input[type="text"],
@@ -37,10 +37,10 @@
 .post-container select,
 .post-container textarea {
   width: 100%;
-  padding: 14px 16px; /* ← 少し広めに */
+  padding: 14px 16px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  font-size: 16px; /* ← 少し大きく */
+  font-size: 16px;
   box-sizing: border-box;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
@@ -49,24 +49,24 @@
 .post-container textarea:focus,
 .post-container select:focus {
   border-color: #4f46e5;
-  box-shadow: 0 0 6px rgba(79, 70, 229, 0.2); /* ← フォーカス時の視覚効果 */
+  box-shadow: 0 0 6px rgba(79, 70, 229, 0.2);
   outline: none;
 }
 
 .post-container textarea {
-  min-height: 120px; /* ← 説明欄などは広めに */
-  resize: vertical; /* ← 高さ変更を許可 */
+  min-height: 120px;
+  resize: vertical;
 }
 
 .post-actions {
   display: flex;
-  justify-content: center; /* 中央寄せ */
+  justify-content: center;
   margin-top: 30px;
 }
 
 .post-container input[type="submit"] {
-  width: 100%; /* ← まずは親の幅いっぱいに */
-  max-width: 320px; /* ← 最大幅を制限（スマホでも整う） */
+  width: 100%;
+  max-width: 320px;
   background-color: #666363;
   color: white;
   font-weight: 600;
@@ -76,7 +76,7 @@
   cursor: pointer;
   transition: background-color 0.2s, transform 0.1s ease-in-out;
   display: block;
-  margin: 0 auto; /* ← 万一flexが効かない場合の保険 */
+  margin: 0 auto;
 }
 
 .post-container input[type="submit"]:hover {

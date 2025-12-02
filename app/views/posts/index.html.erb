@@ -1,25 +1,31 @@
 <h2 class="posts-title">TODOリスト投稿一覧</h2>
 
-<% if @posts.any? %>
-  <div class="posts-grid">
-    <% @posts.each do |post| %>
-      <div class="post-card">
-        <div class="post-card-body">
-          <h3 class="post-title"><%= post.title %></h3>
-          <p class="post-meta">
-            📂 <%= post.category&.name %><br>
-          </p>
-          <p class="post-description"><%= truncate(post.description, length: 60) %></p>
-          <%= link_to "詳細を見る", post_path(post), class: "post-btn" %>
-        </div>
-      </div>
-    <% end %>
-  </div>
-<% else %>
-  <p>TODO投稿はまだありません。</p>
-<% end %>
+<% if user_signed_in? %>
 
-<hr>
+  <% if @posts.any? %>
+    <div class="posts-grid">
+      <% @posts.each do |post| %>
+        <div class="post-card">
+          <div class="post-card-body">
+            <h3 class="post-title"><%= post.title %></h3>
+            <p class="post-meta">
+              📂 <%= post.category&.name %><br>
+              📅 <%= post.schedule_at.strftime("%Y年%m月%d日 %H:%M") %><br>
+            </p>
+            <p class="post-description"><%= truncate(post.description, length: 60) %></p>
+            <%= link_to "詳細を見る", post_path(post), class: "post-btn" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+  <% else %>
+    <p>TODO投稿はまだありません。</p>
+  <% end %>
+
+<% else %>
+  <p>TODOを作成するには、ログインしてください。</p>
+<% end %>
 
 <h2 class="posts-title">ライフハック投稿一覧</h2>
 

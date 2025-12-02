@@ -30,8 +30,8 @@
 
 .form-actions {
   display: flex;
-  gap: 8px; /* ボタン同士の間隔 */
-  justify-content: flex-start; /* 左寄せ */
+  gap: 8px;
+  justify-content: flex-start;
   margin-top: 20px;
 }
 
