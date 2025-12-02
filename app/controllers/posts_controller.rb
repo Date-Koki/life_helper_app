@@ -3,9 +3,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    # ログインユーザーのTODO投稿一覧
     @posts = Post.where(user_id: current_user&.id).order(created_at: :desc)
-    # ライフハック投稿の検索処理
     @q = LifehackPost.ransack(params[:q])
     @lifehack_posts = @q.result(distinct: true)
   end

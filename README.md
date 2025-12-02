@@ -44,3 +44,16 @@
 - belongs_to :user
 - extend ActiveHash::Associations::ActiveRecordExtensions
 - belongs_to :category
+
+## lifehack_comments テーブル
+
+| Column             | Type       | Options     |
+| ------------------ | ---------- | ----------- |
+| user_id            | references | null: false, foreign_key |
+| lifehack_post_id   | references | null: false, foreign_key |
+| content.           | text       | null: false |
+
+### Association
+
+- belongs_to :user
+- belongs_to :lifehack_post

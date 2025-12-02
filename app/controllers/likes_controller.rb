@@ -5,7 +5,7 @@ class LikesController < ApplicationController
     @like = @lifehack_post.likes.create(user: current_user)
 
     respond_to do |format|
-      format.js   # ← これを返す
+      format.js
       format.html { redirect_to @lifehack_post }
     end
   end
@@ -15,7 +15,7 @@ class LikesController < ApplicationController
     @like&.destroy
 
     respond_to do |format|
-      format.js   # ← これを返す
+      format.js
       format.html { redirect_to @lifehack_post }
     end
   end
