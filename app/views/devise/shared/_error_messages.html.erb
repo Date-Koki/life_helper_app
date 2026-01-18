@@ -1,10 +1,10 @@
 <% ordered_attrs = [:name, :nickname, :email, :password, :password_confirmation] %>
 
 <div id="error_explanation">
-  <% if model.errors.any? %>
+  <% if resource.errors.any? %>
     <ul>
       <% ordered_attrs.each do |attr| %>
-        <% model.errors.full_messages_for(attr).each do |msg| %>
+        <% resource.errors.full_messages_for(attr).each do |msg| %>
           <li><%= msg %></li>
         <% end %>
       <% end %>

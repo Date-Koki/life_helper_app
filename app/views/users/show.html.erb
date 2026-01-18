@@ -12,7 +12,7 @@
 
  <!-- TODO投稿 -->
   <section class="todo-posts">
-    <h3>自分のTODO投稿</h3>
+    <h3>自分のTODO投稿</h3><br>
 
     <div class="todo-posts-grid">
       <% @posts.each do |post| %>
@@ -28,7 +28,7 @@
 
   <!-- ライフハック投稿 -->
   <section class="lifehack-posts">
-    <h3>自分のライフハック投稿</h3>
+    <h3>自分のライフハック投稿</h3><br>
 
     <div class="lifehack-posts-grid">
       <% @lifehack_posts.each do |lh_post| %>
@@ -36,7 +36,7 @@
           <h4><%= lh_post.title %></h4>
           <p><%= lh_post.description %></p>
           <% if lh_post.image.attached? %>
-            <%= image_tag lh_post.image.variant(resize_to_limit: [300, 300]) %>
+            <%= image_tag lh_post.image.variant(resize_to_limit: [250, 250]) %>
           <% end %><br>
           <%= link_to "編集", edit_lifehack_post_path(lh_post), class: "btn btn-secondary" %>
           <%= link_to "削除", lifehack_post_path(lh_post), method: :delete, data: { confirm: "本当に削除しますか？" }, class: "btn btn-danger" %>
