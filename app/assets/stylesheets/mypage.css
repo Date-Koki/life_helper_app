@@ -64,20 +64,23 @@
 
 .lifehack-posts {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column;
+  align-items: flex-start;
   width: 100%;
 }
 
 .todo-posts {
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
 .lifehack-posts-grid {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
+  align-items: stretch;
 }
 
 .todo-posts-grid {
