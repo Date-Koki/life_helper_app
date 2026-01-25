@@ -47,45 +47,46 @@ Basic認証PASS：5589<br>
 ## 新規登録機能
 ・ユーザーの新規登録することができます。登録することでTODO投稿やライフハックの投稿、他のユーザーのライフハックへのコメント、いいねが可能となります。<br>
 ・各項目の条件を満たしていない場合は、エラー表示されるように設定しています。<br>
-[![Image from Gyazo](https://i.gyazo.com/d296cc3b41aa3168164a31bba1f27e25.gif)](https://gyazo.com/d296cc3b41aa3168164a31bba1f27e25)
+[![Image from Gyazo](https://i.gyazo.com/93bcea1f5f2ca0a5dcd2e720b2b2dc88.gif)](https://gyazo.com/93bcea1f5f2ca0a5dcd2e720b2b2dc88)
 
 ## TODO投稿機能
 ・TODOを投稿することができます。<br>
 ・投稿したいTODOの種別をカテゴリー選択できるように設定しています。<br>
 ・カレンダー機能で日時を選択できるようにしています。
-[![Image from Gyazo](https://i.gyazo.com/31b20ba13d48fa451f0a9f9d3ddbbd6d.gif)](https://gyazo.com/31b20ba13d48fa451f0a9f9d3ddbbd6d)
+[![Image from Gyazo](https://i.gyazo.com/b3a63b77337d0713b083992bacc1a02c.gif)](https://gyazo.com/b3a63b77337d0713b083992bacc1a02c)
 
 ## ライフハック投稿機能
 ・ライフハックを投稿することができます。<br>
 ・投稿したいライフハックの種別をカテゴリー選択できるように設定しています。<br>
 ・画像を添付できるように設定しています。
-[![Image from Gyazo](https://i.gyazo.com/ece9adaebf766d9be43c409f24792120.gif)](https://gyazo.com/ece9adaebf766d9be43c409f24792120)
+[![Image from Gyazo](https://i.gyazo.com/77f38102558735f588d0a98424a81653.gif)](https://gyazo.com/77f38102558735f588d0a98424a81653)
 
 ## 検索機能
 ・ライフハックを検索することができます。<br>
 ・ワード検索とカテゴリー検索の両方を備えることで検索しやすい仕様にしています。
-[![Image from Gyazo](https://i.gyazo.com/e39ffba0906ca88a269294b568c8fc62.gif)](https://gyazo.com/e39ffba0906ca88a269294b568c8fc62)
+[![Image from Gyazo](https://i.gyazo.com/bd1a5d14503942a78eacb862944554c2.gif)](https://gyazo.com/bd1a5d14503942a78eacb862944554c2)
 
 ## マイページ編集機能
 ・マイページで投稿したTODOとライフハックを編集、削除することができます。<br>
 ・削除する場合、本当に削除して良いかを表示される設定にしています。
-[![Image from Gyazo](https://i.gyazo.com/2ef2fb6bb27fcdbd1ddd28b6ae114db9.gif)](https://gyazo.com/2ef2fb6bb27fcdbd1ddd28b6ae114db9)
+[![Image from Gyazo](https://i.gyazo.com/79c054a589f7ba678a0cc6c87f4a3afc.gif)](https://gyazo.com/79c054a589f7ba678a0cc6c87f4a3afc)
 
 ## コメント機能
 ・他のユーザーが投稿したライフハックにいいねすることができます。<br>
 ・ログアウトした状態では投稿できない仕様にしています。<br>
 ・投稿したコメントがコメント投稿欄の下にユーザー名と併せて表示される仕様にしています。
-[![Image from Gyazo](https://i.gyazo.com/b174011e57c382b0d5bacc607d20a510.gif)](https://gyazo.com/b174011e57c382b0d5bacc607d20a510)
+.削除も可能としています。
+[![Image from Gyazo](https://i.gyazo.com/bf320763d2df8f3952bc3718617f3bb5.gif)](https://gyazo.com/bf320763d2df8f3952bc3718617f3bb5)
 
 ## いいね機能
 ・他のユーザーが投稿したライフハックにいいねすることができます。<br>
 ・ページ遷移後もいいね状態を保持できるようにしています。さらに使いやすいように非同期処理ができる仕様にできるように学習・改善を進めています。
-[![Image from Gyazo](https://i.gyazo.com/1f6057fe79ea35f3d04951409f2fae39.gif)](https://gyazo.com/1f6057fe79ea35f3d04951409f2fae39)
+[![Image from Gyazo](https://i.gyazo.com/1edab202ce4ac80746f805e40a71cb5d.gif)](https://gyazo.com/1edab202ce4ac80746f805e40a71cb5d)
 
 ## AI生成機能
 ・地域を選択すれば、AIがTODOを提案してくれます。<br>
 ・現時点の仕様では、主要な都市のみ選択でき、提案もテンプレートとしていますが、地域特性やユーザー状況に応じた、より柔軟なTODO提案ができるよう、学習・改善を進めています。
-[![Image from Gyazo](https://i.gyazo.com/42d2bfe5ef8811cce40888221bef425c.gif)](https://gyazo.com/42d2bfe5ef8811cce40888221bef425c)
+[![Image from Gyazo](https://i.gyazo.com/3aa0447ab0ddff2c62a548d8bd123184.gif)](https://gyazo.com/3aa0447ab0ddff2c62a548d8bd123184)
 
 # データベース設計
 [![Image from Gyazo](https://i.gyazo.com/e9f2013b4334a28edd28cde871dca32d.png)](https://gyazo.com/e9f2013b4334a28edd28cde871dca32d)
@@ -170,7 +171,7 @@ $ rails db:migrate
 $ rails s
 
 # 工夫したポイント
-・ユーザーがわかりやすく、使いやすいアプリとするため、全体的にシンプルな仕様にしています。<br>
+・ユーザーがわかりやすく、使いやすいアプリとするため、全体的にシンプルでわかりやすくするのを前提としながらも、見出しはアイコンを使って私生活で使うようなアプリとしてのポップな仕様にするなどの工夫をしています。<br>
 ・各機能の詳しい工夫ポイントは、上記の機能説明に記載しております。<br>
 ・今後、AI生成も可能となるような想定した仕様としています。
 

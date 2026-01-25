@@ -1,4 +1,4 @@
-<h2 class="posts-title">TODOリスト投稿一覧</h2>
+<h2 class="posts-title">✏️TODOリスト投稿一覧</h2>
 
 <% if user_signed_in? %>
 
@@ -27,9 +27,8 @@
   <p>TODOを作成するには、ログインしてください。</p>
 <% end %>
 
-<h2 class="posts-title">ライフハック投稿一覧</h2>
+<h2 class="posts-title">✏️ライフハック投稿一覧</h2>
 
-<!-- ライフハック検索フォーム -->
 <div class="search-form">
   <%= search_form_for @q, url: root_path, method: :get do |f| %>
     <div class="search-field">
