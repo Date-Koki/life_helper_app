@@ -41,7 +41,7 @@
   padding: 6px 14px;
   border: none;
   border-radius: 8px;
-  background-color: #1C3667;
+  background-color: #3b82f6;
   color: #fff;
   font-size: 0.9rem;
   cursor: pointer;
@@ -50,4 +50,5 @@
 
 .post-show-comments input[type="submit"]:hover {
   background-color: #274a8f;
+  transform: scale(1.02);
 }

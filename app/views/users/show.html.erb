@@ -1,18 +1,16 @@
 <div class="mypage-container">
-  <h2>マイページ</h2>
+  <h2>🧑‍💻マイページ</h2>
 
-  <!-- アカウント情報 -->
   <section class="account-info">
-    <h3>アカウント情報</h3>
+    <h3>✏️アカウント情報</h3>
     <p>名前: <%= @user.name %></p>
     <p>ニックネーム: <%= @user.nickname %></p>
     <p>メールアドレス: <%= @user.email %></p>
     <%= link_to "編集", edit_user_path(@user), class: "btn btn-primary" %>
   </section>
 
- <!-- TODO投稿 -->
   <section class="todo-posts">
-    <h3>自分のTODO投稿</h3><br>
+    <h3>✏️自分のTODO投稿</h3><br>
 
     <div class="todo-posts-grid">
       <% @posts.each do |post| %>
@@ -26,9 +24,8 @@
     </div>
   </section>
 
-  <!-- ライフハック投稿 -->
   <section class="lifehack-posts">
-    <h3>自分のライフハック投稿</h3><br>
+    <h3>✏️自分のライフハック投稿</h3><br>
 
     <div class="lifehack-posts-grid">
       <% @lifehack_posts.each do |lh_post| %>

@@ -1,9 +1,10 @@
 .living-todos-container {
-  max-width: 400px;
+  max-width: 500px;
   margin: 80px auto;
   padding: 40px;
   background-color: #f5f6f8;
   border-radius: 16px;
+  border: 1px solid #ddd;
   box-shadow: 0 8px 24px rgba(0,0,0,0.1);
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
@@ -44,10 +45,15 @@
 }
 
 .generate-btn {
-  background-color: #666363;
+  background-color: #3b82f6;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  border: none;
+  border: 1px solid black;
   cursor: pointer;
+}
+
+.generate-btn:hover {
+  background-color: #274a8f;
+  transform: scale(1.02);
 }

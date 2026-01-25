@@ -1,6 +1,6 @@
 <div class="post-show-container">
   <div class="post-show-header">
-    <h2 class="post-show-title"><%= @lifehack_post.title %></h2>
+    <h2 class="post-show-title">💡<%= @lifehack_post.title %></h2>
       <div class="post-show-meta">
         <div><strong>ニックネーム</strong><br><%= @lifehack_post.nickname %></div>
         <div><strong>カテゴリー</strong><br><%= @lifehack_post.category.name %></div>
@@ -11,10 +11,9 @@
   <div class="post-show-actions">
     <% if @lifehack_post.user == current_user %>
       <%= link_to '編集', edit_lifehack_post_path(@lifehack_post), class: "btn btn-edit" %>
-      <%= form_with model: @lifehack_post, url: lifehack_post_path(@lifehack_post), method: :delete, data: { turbo_confirm: "本当に削除しますか？" } do %>
-        <%= submit_tag "削除", class: "btn btn-delete" %>
+      <%= button_to "削除",lifehack_post_path(@lifehack_post),method: :delete,
+          data: { confirm: "本当に削除しますか？" },class: "btn btn-delete" %>
       <% end %>
-    <% end %>
     <%= link_to '一覧に戻る', posts_path, class: "btn btn-back" %>
   </div>
 
@@ -35,6 +34,14 @@
         <p>
           <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
           <%= comment.text %>
+
+          <% if user_signed_in? && comment.user == current_user %>
+          <%= link_to "削除",
+              lifehack_post_lifehack_comment_path(@lifehack_post, comment),
+              method: :delete,
+              data: { confirm: "本当に削除しますか？" },
+              class: "comment-delete-btn" %>
+          <% end %>
         </p>
       <% end %>
     </div>  
