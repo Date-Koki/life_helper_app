@@ -6,6 +6,24 @@ class PostsController < ApplicationController
     @posts = Post.where(user_id: current_user&.id).order(created_at: :desc)
     @q = LifehackPost.ransack(params[:q])
     @lifehack_posts = @q.result(distinct: true)
+
+    if current_user
+      @total_posts = current_user.posts.count
+      @done_posts = current_user.posts.where(completed: true).count
+      @completion_rate = @total_posts > 0 ? (@done_posts * 100) / @total_posts : 0
+    end
+
+    if @total_posts > 0
+      @completion_rate = (@done_posts * 100) / @total_posts
+    else
+      @completion_rate = 0
+    end
+
+    def toggle_complete
+      post = current_user.posts.find(params[:id])
+      post.update(completed: !post.completed)
+      redirect_to root_path
+    end
   end
 
   def new
