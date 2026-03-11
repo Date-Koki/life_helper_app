@@ -1,5 +1,11 @@
 <h2 class="posts-title">✏️TODOリスト投稿一覧</h2>
 
+<div class="progress-bar">
+  <div class="progress" style="width: <%= @completion_rate %>%;">
+  </div>
+</div>
+<p><%= @completion_rate %>% 完了</p>
+
 <% if user_signed_in? %>
 
   <% if @posts.any? %>
@@ -14,6 +20,16 @@
             </p>
             <p class="post-description"><%= truncate(post.description, length: 60) %></p>
             <%= link_to "詳細を見る", post_path(post), class: "post-btn" %>
+            <%= button_to toggle_complete_post_path(post),
+              method: :patch,
+              class: "complete-btn" do %>
+
+              <% if post.completed? %>
+                ↩ 未完了に戻す
+              <% else %>
+                ✔ 完了
+              <% end %>
+            <% end %>
           </div>
         </div>
       <% end %>

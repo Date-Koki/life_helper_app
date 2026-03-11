@@ -314,3 +314,30 @@ html, body {
   background-color: #274a8f;
   transform: scale(1.02);
 }
+
+.progress-bar{
+  width:300px;
+  height:20px;
+  background:#eee;
+  border-radius:10px;
+  margin:10px;
+}
+
+.progress{
+  height:100%;
+  background:#4CAF50;
+  border-radius:10px;
+}
+
+.complete-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  color: #007bff;
+  text-decoration: none;
+  transition: all 0.2s;
+  background-color: white;
+  margin-top: 10px;
+}
