@@ -11,7 +11,7 @@
   <% if @posts.any? %>
     <div class="posts-grid">
       <% @posts.each do |post| %>
-        <div class="post-card">
+        <div class="post-card <%= 'expired' if post.schedule_at < Time.current %>">
           <div class="post-card-body">
             <h3 class="post-title"><%= post.title %></h3>
             <p class="post-meta">
