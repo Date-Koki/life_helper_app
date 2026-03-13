@@ -8,6 +8,12 @@
 
 <% if user_signed_in? %>
 
+  <div class="todo-filter">
+    <%= link_to "すべて", root_path, class: "filter-btn" %>
+    <%= link_to "完了", root_path(status: "completed"), class: "filter-btn" %>
+    <%= link_to "未完了", root_path(status: "incomplete"), class: "filter-btn" %>
+  </div>
+
   <% if @posts.any? %>
     <div class="posts-grid">
       <% @posts.each do |post| %>

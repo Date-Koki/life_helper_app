@@ -345,3 +345,16 @@ html, body {
 .expired {
   border: 10px solid red !important;
 }
+
+.todo-filter {
+  margin-bottom: 10px;
+}
+
+.filter-btn{
+  margin-right:10px;
+  padding:6px 12px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  color: #007bff;
+  text-decoration:none;
+}
