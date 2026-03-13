@@ -3,7 +3,15 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.where(user_id: current_user&.id).order(created_at: :desc)
+    @posts = Post.where(user_id: current_user&.id)
+
+    if params[:status] == "incomplete"
+      @posts = @posts.where(completed: false)
+    elsif params[:status] == "completed"
+      @posts = @posts.where(completed: true)
+    end
+
+    @posts = @posts.order(created_at: :desc)
     @q = LifehackPost.ransack(params[:q])
     @lifehack_posts = @q.result(distinct: true)
 
