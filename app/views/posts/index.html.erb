@@ -8,6 +8,18 @@
 
 <% if user_signed_in? %>
 
+  <h3>⚠ 期限が近いタスク</h3>
+
+  <% if @near_posts.any? %>
+    <ul>
+      <% @near_posts.each do |post| %>
+        <li>
+          <%= post.title %>（<%= post.schedule_at.strftime("%m/%d") %>）
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+
   <div class="todo-filter">
     <%= link_to "すべて", root_path, class: "filter-btn" %>
     <%= link_to "完了", root_path(status: "completed"), class: "filter-btn" %>
