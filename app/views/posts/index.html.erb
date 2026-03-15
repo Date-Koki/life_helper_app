@@ -26,6 +26,12 @@
     <%= link_to "未完了", root_path(status: "incomplete"), class: "filter-btn" %>
   </div>
 
+  <div class="todo-sort">
+    <%= link_to "新しい順", root_path(sort: "new") %>
+    <%= link_to "古い順", root_path(sort: "old") %>
+    <%= link_to "期限順", root_path(sort: "deadline") %>
+  </div>
+
   <% if @posts.any? %>
     <div class="posts-grid">
       <% @posts.each do |post| %>

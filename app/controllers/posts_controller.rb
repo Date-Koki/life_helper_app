@@ -11,7 +11,15 @@ class PostsController < ApplicationController
       @posts = @posts.where(completed: true)
     end
 
-    @posts = @posts.order(created_at: :desc)
+    case params[:sort]
+    when "deadline"
+      @posts = @posts.order(schedule_at: :asc)
+    when "old"
+      @posts = @posts.order(created_at: :asc)
+    else
+      @posts = @posts.order(created_at: :desc)
+    end
+
     @q = LifehackPost.ransack(params[:q])
     @lifehack_posts = @q.result(distinct: true)
 
