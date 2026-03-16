@@ -31,10 +31,6 @@ class PostsController < ApplicationController
       @total_posts = current_user.posts.count
       @done_posts = current_user.posts.where(completed: true).count
       @completion_rate = @total_posts > 0 ? (@done_posts * 100) / @total_posts : 0
-    end
-
-    if @total_posts > 0
-      @completion_rate = (@done_posts * 100) / @total_posts
     else
       @completion_rate = 0
     end
