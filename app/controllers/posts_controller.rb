@@ -23,9 +23,9 @@ class PostsController < ApplicationController
     @q = LifehackPost.ransack(params[:q])
     @lifehack_posts = @q.result(distinct: true)
 
-    @near_posts = current_user.posts
-    .where(completed: false)
-    .where(schedule_at: Time.current..3.days.from_now)
+    @near_posts = current_user&.posts
+      &.where(completed: false)
+      &.where(schedule_at: Time.current..3.days.from_now) || []
 
     if current_user
       @total_posts = current_user.posts.count
