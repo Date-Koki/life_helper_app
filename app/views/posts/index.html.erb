@@ -27,9 +27,9 @@
   </div>
 
   <div class="todo-sort">
-    <%= link_to "新しい順", root_path(sort: "new") %>
-    <%= link_to "古い順", root_path(sort: "old") %>
-    <%= link_to "期限順", root_path(sort: "deadline") %>
+    <%= link_to "新しい順", root_path(sort: "new"), class: "sort-btn" %>
+    <%= link_to "古い順", root_path(sort: "old"), class: "sort-btn" %>
+    <%= link_to "期限順", root_path(sort: "deadline"), class: "sort-btn" %>
   </div>
 
   <% if @posts.any? %>
