@@ -1,22 +1,17 @@
 <div class="living-todos-container">
 
-  <h1>💡AIアシスタントからの提案</h1>
-  <p>選択した都道府県: <strong><%= @prefecture %></strong></p>
+  <h1>💡提案</h1>
 
   <div class="ai-bubble">
-    <p>こちらがあなたの新生活TODOリストです👇</p>
-    <ul>
-      <% @todos.each do |todo| %>
-        <li><%= todo %></li>
-      <% end %>
-    </ul>
-
-    <p>参考リンク:</p>
-    <ul>
-      <% @links.each do |city, url| %>
-        <li><a href="<%= url %>" target="_blank"><%= city %></a></li>
-      <% end %>
-    </ul>
+    <p>作成した方がいい新生活TODOリストの提案です👇</p>
+    <% @todos.each do |category, todos| %>
+      <h3><%= category %></h3>
+      <ul>
+        <% todos.each do |todo| %>
+          <li><%= todo %></li>
+        <% end %>
+      </ul>
+    <% end %>
   </div>
 
   <%= link_to "戻る", new_living_todo_path, class: "nav-btn" %>
