@@ -15,7 +15,11 @@ Rails.application.routes.draw do
   end
   resources :users, only: [:show, :edit, :update]
 
-  resources :living_todos, only: [:new, :create]
+  resources :living_todos, only: [:new, :create] do
+    collection do
+      post :bulk_create
+    end
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

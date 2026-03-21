@@ -22,4 +22,14 @@ class LivingTodo < ApplicationRecord
       "掃除道具の準備"
     ]
   }
+
+  CITY_LINKS = {
+    "大阪府" => {
+      "大阪市" => "https://www.city.osaka.lg.jp/",
+      "堺市" => "https://www.city.sakai.lg.jp/"
+    },
+    "東京都" => {
+      "千代田区" => "https://www.city.chiyoda.lg.jp/"
+    }
+  }
 end
