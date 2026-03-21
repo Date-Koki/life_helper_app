@@ -4,14 +4,25 @@
 
   <div class="ai-bubble">
     <p>作成した方がいい新生活TODOリストの提案です👇</p>
-    <% @todos.each do |category, todos| %>
-      <h3><%= category %></h3>
-      <ul>
+
+    <%= form_with url: bulk_create_living_todos_path, method: :post do %>
+
+      <% @todos.each do |category, todos| %>
+        <h3><%= category %></h3>
+
         <% todos.each do |todo| %>
-          <li><%= todo %></li>
+          <label>
+            <%= check_box_tag "todos[]", "#{category}|#{todo}" %>
+            <%= todo %>
+          </label><br>
         <% end %>
-      </ul>
+
+      <% end %>
+
+      <%= submit_tag "選択したTODOを追加", class: "btn btn-primary" %>
+
     <% end %>
+
   </div>
 
   <%= link_to "戻る", new_living_todo_path, class: "nav-btn" %>
