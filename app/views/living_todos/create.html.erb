@@ -2,7 +2,7 @@
 
   <h1>💡提案</h1>
 
-  <div class="ai-bubble">
+  <div class="todo-suggestion">
     <p>作成した方がいい新生活TODOリストの提案です👇</p>
 
     <%= form_with url: bulk_create_living_todos_path, method: :post do %>
@@ -24,6 +24,22 @@
     <% end %>
 
   </div>
+
+  <h3>自治体リンク</h3>
+
+  <% if @links.present? %>
+    <ul>
+      <% @links.each do |name, url| %>
+        <li>
+          <a href="<%= url %>" target="_blank">
+            <%= name %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>該当する自治体情報がありません</p>
+  <% end %>
 
   <%= link_to "戻る", new_living_todo_path, class: "nav-btn" %>
 </div>

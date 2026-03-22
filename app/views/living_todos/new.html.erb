@@ -1,10 +1,19 @@
 <div class="living-todos-container">
 
-  <h1>💻 AI新生活TODOガイド</h1>
-  <p>都道府県を選ぶと、必要な新生活TODOリストと自治体リンクをAI風に案内します。</p>
+  <h1>💻 新生活TODO作成ガイド</h1>
+  <p>都道府県を選ぶと、必要な新生活TODOリストと自治体リンクを案内します。</p>
 
   <%= form_with url: living_todos_path, method: :post do %>
-    <%= submit_tag "新生活に必要なよくあるTODOの提案", class: "generate-btn" %>
+
+    <div class="field">
+      <%= label_tag :prefecture, "都道府県を選択" %><br>
+      <%= select_tag :prefecture,
+        options_for_select(["東京都", "大阪府", "京都府"]),
+        prompt: "選択してください" %>
+    </div>
+
+    <%= submit_tag "新生活に必要なTODOを提案", class: "generate-btn" %>
+
   <% end %>
 
 </div>
