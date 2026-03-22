@@ -16,7 +16,7 @@
   font-weight: 600;
 }
 
-.living-todos-container form {
+.living-todos-container > form {
   display: flex;
   align-items: center;
   gap: 50px;
