@@ -85,9 +85,10 @@ Basic認証PASS：5589<br>
 
 ## TODO提案機能
 ・都道府県を選択して提案ボタンを押せば、作成した方がいいTODOを提案してくれます。<br>
-・提案されたTODOのチェックボックスをチェックして、「選択したTODOを追加」を押すと、TODOに登録されます。<br>
+・提案されたTODOのチェックボックスをチェック、やることの説明、日付を記載して「選択したTODOを追加」を押すと、TODOに登録されます。<br>
 ・現時点の仕様では、主要な都市のみ選択でき、提案もテンプレートとしていますが、地域特性やユーザー状況に応じた、より柔軟なTODO提案ができるよう、学習・改善を進めています。
-[![Image from Gyazo](https://i.gyazo.com/a9e976be1d8280ed1093879f0db6a326.gif)](https://gyazo.com/a9e976be1d8280ed1093879f0db6a326)
+[![Image from Gyazo](https://i.gyazo.com/4aee1e054f99003da043d8dbbd3febbb.gif)](https://gyazo.com/4aee1e054f99003da043d8dbbd3febbb)
+[![Image from Gyazo](https://i.gyazo.com/6e8145a4d7f685e3cdd84a8d8c818134.gif)](https://gyazo.com/6e8145a4d7f685e3cdd84a8d8c818134)
 
 # データベース設計
 [![Image from Gyazo](https://i.gyazo.com/e9f2013b4334a28edd28cde871dca32d.png)](https://gyazo.com/e9f2013b4334a28edd28cde871dca32d)
