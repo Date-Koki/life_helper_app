@@ -83,10 +83,11 @@ Basic認証PASS：5589<br>
 ・ページ遷移後もいいね状態を保持できるようにしています。さらに使いやすいように非同期処理ができる仕様にできるように学習・改善を進めています。
 [![Image from Gyazo](https://i.gyazo.com/1edab202ce4ac80746f805e40a71cb5d.gif)](https://gyazo.com/1edab202ce4ac80746f805e40a71cb5d)
 
-## AI生成機能
-・地域を選択すれば、AIがTODOを提案してくれます。<br>
+## TODO提案機能
+・都道府県を選択して提案ボタンを押せば、作成した方がいいTODOを提案してくれます。<br>
+・提案されたTODOのチェックボックスをチェックして、「選択したTODOを追加」を押すと、TODOに登録されます。<br>
 ・現時点の仕様では、主要な都市のみ選択でき、提案もテンプレートとしていますが、地域特性やユーザー状況に応じた、より柔軟なTODO提案ができるよう、学習・改善を進めています。
-[![Image from Gyazo](https://i.gyazo.com/3aa0447ab0ddff2c62a548d8bd123184.gif)](https://gyazo.com/3aa0447ab0ddff2c62a548d8bd123184)
+[![Image from Gyazo](https://i.gyazo.com/a9e976be1d8280ed1093879f0db6a326.gif)](https://gyazo.com/a9e976be1d8280ed1093879f0db6a326)
 
 # データベース設計
 [![Image from Gyazo](https://i.gyazo.com/e9f2013b4334a28edd28cde871dca32d.png)](https://gyazo.com/e9f2013b4334a28edd28cde871dca32d)
