@@ -8,17 +8,24 @@ class LivingTodosController < ApplicationController
   end
 
   def bulk_create
-    selected_todos = params[:todos] || []
+    todos = params.require(:todos).permit!
 
-    return redirect_to root_path, alert: "選択してください" if selected_todos.empty?
+    todos.each do |_, todo|
+      next unless todo["checked"] == "1"
+      next if todo["title"].blank?
 
-    selected_todos.each do |todo|
-      category, title = todo.split("|")
+      category, title = todo["title"].split("|")
+
+      schedule = if todo["schedule_at"].present?
+                  Time.zone.parse(todo["schedule_at"])
+                 else
+                  Time.current + 1.day
+                 end
 
       Post.create(
         title: title,
-        description: "新生活TODO",
-        schedule_at: Time.current + 1.day,
+        description: todo["description"].presence || "新生活TODO",
+        schedule_at: schedule,
         category_id: Category.find_by(name: category)&.id || 1,
         user: current_user
       )

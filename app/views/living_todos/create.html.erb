@@ -7,14 +7,23 @@
 
     <%= form_with url: bulk_create_living_todos_path, method: :post do %>
 
-      <% @todos.each do |category, todos| %>
+      <% @todos.each_with_index do |(category, todos), i| %>
         <h3><%= category %></h3>
 
-        <% todos.each do |todo| %>
-          <label>
-            <%= check_box_tag "todos[]", "#{category}|#{todo}" %>
-            <%= todo %>
-          </label><br>
+        <% todos.each_with_index do |todo, j| %>
+          <div class="todo-item">
+
+            <label>
+              <%= check_box_tag "todos[#{i}_#{j}][checked]", "1" %>
+              <%= todo %>
+            </label><br>
+
+            <%= hidden_field_tag "todos[#{i}_#{j}][title]", "#{category}|#{todo}" %>
+
+            <%= text_field_tag "todos[#{i}_#{j}][description]", "", placeholder: "やることの説明を入力" %>
+
+            <%= datetime_local_field_tag "todos[#{i}_#{j}][schedule_at]" %>
+          </div>
         <% end %>
 
       <% end %>
