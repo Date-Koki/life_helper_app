@@ -90,6 +90,24 @@ Basic認証PASS：5589<br>
 [![Image from Gyazo](https://i.gyazo.com/4aee1e054f99003da043d8dbbd3febbb.gif)](https://gyazo.com/4aee1e054f99003da043d8dbbd3febbb)
 [![Image from Gyazo](https://i.gyazo.com/6e8145a4d7f685e3cdd84a8d8c818134.gif)](https://gyazo.com/6e8145a4d7f685e3cdd84a8d8c818134)
 
+## TODOの完了率表示機能
+・TODO投稿したもののうち、完了したものは、完了ボタンを押して完了状態にできます。
+・完了TODOを未完了状態に戻すことができます。
+・完了登録すると、完了率に反映され、どのくらい完了したかを可視化することができます。
+[![Image from Gyazo](https://i.gyazo.com/372b63bf1cedc682f971d5a272b8ecae.gif)](https://gyazo.com/372b63bf1cedc682f971d5a272b8ecae)
+
+## 期限の近いTODOの表示機能
+・期限が3日以内のTODOを投稿をした場合は、期限が近いタスクとして表示されます。
+[![Image from Gyazo](https://i.gyazo.com/9f54f50dca8d7200358756b4fcdb8adb.gif)](https://gyazo.com/9f54f50dca8d7200358756b4fcdb8adb)
+
+## 期限が過ぎているTODOの表示機能
+・期限が過ぎているTODOがある場合は、赤枠で表示されるように設定しています。
+[![Image from Gyazo](https://i.gyazo.com/6e2544b5256db4147abd7f8b2ce14182.gif)](https://gyazo.com/6e2544b5256db4147abd7f8b2ce14182)
+
+## TODOのソート機能
+・完了、未完了や投稿の新しい順、古い順、期限順など、必要に応じてソートをかけることができる設定にしています。
+[![Image from Gyazo](https://i.gyazo.com/8f7447d223d4f80c3350c81d35a3e27b.gif)](https://gyazo.com/8f7447d223d4f80c3350c81d35a3e27b)
+
 # データベース設計
 [![Image from Gyazo](https://i.gyazo.com/e9f2013b4334a28edd28cde871dca32d.png)](https://gyazo.com/e9f2013b4334a28edd28cde871dca32d)
 
