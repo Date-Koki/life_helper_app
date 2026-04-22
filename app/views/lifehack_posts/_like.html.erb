@@ -5,13 +5,11 @@
     <%= link_to "❤️ いいね済",
           lifehack_post_like_path(lifehack_post, like),
           method: :delete,
-          remote: true,
           class: "like-btn liked no-underline" %>
   <% else %>
     <%= link_to "🤍 いいね",
           lifehack_post_likes_path(lifehack_post),
           method: :post,
-          remote: true,
           class: "like-btn no-underline" %>
   <% end %>
 </div>
