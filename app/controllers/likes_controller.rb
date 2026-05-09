@@ -2,7 +2,8 @@ class LikesController < ApplicationController
   before_action :set_lifehack_post
 
   def create
-    @like = @lifehack_post.likes.create(user: current_user)
+    @lifehack_post = LifehackPost.find(params[:lifehack_post_id])
+    current_user.likes.create(lifehack_post: @lifehack_post)
 
     respond_to do |format|
       format.js
